@@ -1,21 +1,25 @@
-﻿namespace Core.Constants
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Core.Constants
 {
-    public enum OwnerOptions
+   public enum AdminOptions
     {
-        CreateOwner = 1,
-        UpdateOwner,
-        DeleteOwner,
-        GetAllOwners,
-        BackToMenu,
+        Logout = 1,
+        BackMainMenu = 0,
     }
     public enum DrugOptions
     {
         CreateDrug = 1,
         UpdateDrug,
         DeleteDrug,
+        GetAllDrug,
         GetAllDrugByStore,
-        GetDrugByStore,
-        BackToMenu,
+        DrugFilter,
+        BackMainMenu = 0,
     }
 
     public enum DruggistOptions
@@ -25,7 +29,7 @@
         DeleteDruggist,
         GetAllDruggist,
         GetAllDruggistByDrugStore,
-        BackToMenu,
+        BackToMainMenu = 0,
     }
 
     public enum DrugStoreOptions
@@ -34,9 +38,19 @@
         UpdateDrugStore,
         DeleteDrugStore,
         GetAllDrugStore,
-        SaleDrugStore,
         GetAllDrugStoreByOwner,
-        BackToMenu,
+        Sale,
+        BackToMainMenu = 0,
     }
+    public enum OwnerOptions
+    {
+        CreateOwner = 1,
+        UpdateOwner,
+        DeleteOwner,
+        GetAllOwner,
+        BackToMainMenu = 0,
+    }
+
+  
 }
 

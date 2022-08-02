@@ -14,6 +14,7 @@ namespace Core.Helpers
             encData_byte = Encoding.UTF8.GetBytes(password);
             string encodedData = Convert.ToBase64String(encData_byte);
             return encodedData;
+
         }
         public static string Decrypt(string hashedPassword)
         {
@@ -25,6 +26,7 @@ namespace Core.Helpers
             utf8Decode.GetChars(todecode_byte, 0, todecode_byte.Length, decoded_char, 0);
             string result = new string(decoded_char);
             return result;
+
         }
     }
 }

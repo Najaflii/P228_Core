@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Core.Helpers
 {
-    public static class ConsoleHelper
+   public static class ConsoleHelper
     {
-        public static void WriteTextWithColor(ConsoleColor color, string text)
+    public static void WriteTextWithColor(ConsoleColor color, string text)
         {
             Console.ForegroundColor = color;
             Console.WriteLine(text);
             Console.ResetColor();
         }
+
+
     }
 }

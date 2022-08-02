@@ -1,5 +1,11 @@
 ﻿using Core.Entities;
 using Core.Helpers;
+using DataAccess.Impelementations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Pharmacy.Controllers
 {
@@ -11,17 +17,28 @@ namespace Pharmacy.Controllers
             _adminRepositories = new AdminRepository();
         }
 
+        #region Authenticate
         public Admin Authenticate()
         {
-            ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Enter admin login");
+           
+            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "enter admin username:");
             string userName = Console.ReadLine();
 
-            ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Enter admin password");
+            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "enter admin password:");
             string password = Console.ReadLine();
 
-            var admin = _adminRepositories.Get(a => a.Login.ToLower() == userName.ToLower()
-                                   && PasswordHasher.Decrypt(a.Password) == password);
+            var admin = _adminRepositories.Get(a => a.UserName.ToLower() == userName.ToLower()
+                                             && PasswordHasher.Decrypt(a.Password) == password);
             return admin;
+        
+
         }
+
+
+        #endregion
+
+
+
+
     }
 }
