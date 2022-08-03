@@ -23,3 +23,23 @@ C:\Users\ASUS ROG\Desktop\Pharmacy\Pharmacy\obj\Debug\net6.0\refint\Pharmacy.dll
 C:\Users\ASUS ROG\Desktop\Pharmacy\Pharmacy\obj\Debug\net6.0\Pharmacy.pdb
 C:\Users\ASUS ROG\Desktop\Pharmacy\Pharmacy\obj\Debug\net6.0\Pharmacy.genruntimeconfig.cache
 C:\Users\ASUS ROG\Desktop\Pharmacy\Pharmacy\obj\Debug\net6.0\ref\Pharmacy.dll
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\Pharmacy.exe
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\Pharmacy.deps.json
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\Pharmacy.runtimeconfig.json
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\Pharmacy.dll
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\Pharmacy.pdb
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\Core.dll
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\DataAccess.dll
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\bin\Debug\net6.0\Core.pdb
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.csproj.AssemblyReference.cache
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.AssemblyInfoInputs.cache
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.AssemblyInfo.cs
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.csproj.CoreCompileInputs.cache
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.csproj.CopyComplete
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.dll
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\refint\Pharmacy.dll
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.pdb
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\Pharmacy.genruntimeconfig.cache
+C:\Users\imac-win\Desktop\Pharmacy-App\Pharmacy\obj\Debug\net6.0\ref\Pharmacy.dll

@@ -1,7 +1,6 @@
 ﻿using Core.Constants;
 using Core.Helpers;
 using Pharmacy.Controllers;
-using System;
 namespace Pharmacy
 {
     public class Pharmacy
@@ -23,21 +22,21 @@ namespace Pharmacy
             if (admin != null)
             {
 
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Welcome {admin.UserName}");
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Welcome My Pharmacy App");
-                Console.WriteLine("----------------------------------------------------------");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Welcome :) {admin.UserName}");
+
+                Console.WriteLine("***");
                 while (true)
                 {
-                mainMenu: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Main Menu:");
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "1 - Admin Menu");
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "2 - Drug Menu");
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "3 - Druggist Menu");
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "4 - DrugStore Menu");
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "5 - Owner Menu");
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "1 - Admin Menu");
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "2 - Owner Menu");
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Drug Menu");
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - Druggist Menu");
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "5 - DrugStore Menu");
+                   mainMenu: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Menu");
 
-                    Console.WriteLine("----------------------------------------------------------");
+                    Console.WriteLine("***");
 
-                selectNumber: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Number For Use:");
+                selectNumber: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter number");
                     string number = Console.ReadLine();
                     int selectedNumber;
                     bool result = int.TryParse(number, out selectedNumber);
@@ -46,10 +45,10 @@ namespace Pharmacy
                     {
                         if (selectedNumber == 1)
                         {
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "1 - Logout UserName");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "0 - Back To Main Menu");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "1 - Logout");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "0 - Menu");
 
-                        selectOp: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Options:");
+                        selectOp: ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Select option");
                             number = Console.ReadLine();
                             result = int.TryParse(number, out selectedNumber);
 
@@ -63,37 +62,34 @@ namespace Pharmacy
                                         break;
                                     case (int)AdminOptions.BackMainMenu:
                                         goto mainMenu;
-                                        break;
                                 }
-
                             }
 
                             else
                             {
-                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "The number you selected is not available");
+                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
                                 goto selectOp;
                             }
                         }
 
                         else if (selectedNumber == 2)
                         {
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "1 - Creat Drug");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "2 - Update Drug");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "3 - Delete Drug");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "4 - Get All");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "5 - Get All Drug By Store");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "6 - Drug Filter");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "0 - Back To Main Menu");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "1 - Creat Drug");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "2 - Update Drug");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Delete Drug");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - Get All");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "5 - Get All Drug By Store");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "0 - Menu");
 
-                            Console.WriteLine("----------------------------------------------------------");
+                            Console.WriteLine("***");
 
 
-                        selectopp: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Options");
+                        selectopp: ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Select option");
                             number = Console.ReadLine();
 
                             result = int.TryParse(number, out selectedNumber);
 
-                            if (selectedNumber >= 0 && selectedNumber <= 6)
+                            if (selectedNumber >= 0 && selectedNumber <= 5)
                             {
                                 switch (selectedNumber)
                                 {
@@ -117,26 +113,24 @@ namespace Pharmacy
                                         break;
                                     case (int)DrugOptions.BackMainMenu:
                                         goto mainMenu;
-                                        break;
-
                                 }
                             }
                             else
                             {
-                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "The number you selected is not available");
+                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
                                 goto selectopp;
                             }
                         }
                         else if (selectedNumber == 3)
                         {
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "1 - Creat Druggist");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "2 - Update Druggist");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "3 - Delete Druggist");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "4 - Get All Druggist");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "5 - Get Drugist By Store");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "0 - Back To Main Menu");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "1 - Creat Druggist");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "2 - Update Druggist");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Delete Druggist");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - Get All Druggist");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "5 - Get Drugist By Store");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "0 - Menu");
 
-                            Console.WriteLine("----------------------------------------------------------");
+                            Console.WriteLine("***");
 
                         oppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Options:");
                             number = Console.ReadLine();
@@ -164,16 +158,11 @@ namespace Pharmacy
                                         break;
                                     case (int)DruggistOptions.BackToMainMenu:
                                         goto mainMenu;
-                                        break;
-                                        
-
-
-
                                 }
                             }
                             else
                             {
-                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "The number you selected is not available");
+                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
                                 goto oppp;
                             }
 
@@ -186,11 +175,11 @@ namespace Pharmacy
                             ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "4 - Get All DrugStore");
                             ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "5 - Get All DrugStore By Owner");
                             ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "6 - Sale");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "0 - Back To Main Menu");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "0 - Menu");
 
-                            Console.WriteLine("----------------------------------------------------------");
+                            Console.WriteLine("***");
 
-                        opppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Options:");
+                        opppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Select option");
                             number = Console.ReadLine();
 
                             result = int.TryParse(number, out selectedNumber);
@@ -218,27 +207,25 @@ namespace Pharmacy
                                         break;
                                     case (int)DrugStoreOptions.BackToMainMenu:
                                         goto mainMenu;
-                                        break;
-
                                 }
                             }
                             else
                             {
-                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "The number you selected is not available");
+                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
                                 goto opppp;
                             }
                         }
                         else if (selectedNumber == 5)
                         {
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "1 - Creat Owner");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "2 - Update Owner");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "3 - Delete Owner");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "4 - Get All Owner");
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, "0 - Back To Main Menu");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "1 - Creat Owner");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "2 - Update Owner");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Delete Owner");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - Get All Owner");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "0 - Menu");
 
-                            Console.WriteLine("----------------------------------------------------------");
+                            Console.WriteLine("***");
 
-                        oppppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Options:");
+                        oppppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Select option");
                             number = Console.ReadLine();
 
                             result = int.TryParse(number, out selectedNumber);
@@ -261,53 +248,27 @@ namespace Pharmacy
                                         break;
                                     case (int)OwnerOptions.BackToMainMenu:
                                         goto mainMenu;
-                                        break;
-
                                 }
                             }
                             else
                             {
-                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "The number you selected is not available");
+                                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
                                 goto oppppp;
                             }
                         }
                     }
                     else
                     {
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Please enter correct format number");
+                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
                         goto selectNumber;
                     }
-
                 }
             }
             else
             {
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct password and username");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct username and password");
                 goto adminUserName;
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
-
     }
 }

@@ -240,52 +240,6 @@ namespace Pharmacy.Controllers
         }
         #endregion
 
-        #region  GetAllDrugByStore
-        public void GetAllDrugByStore()
-        {
-            var drugstores = _drugStoreRepository.GetAll();
-            if (drugstores.Count > 0)
-            {
-            all: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "All drugstore:");
-                foreach (var drugstore in drugstores)
-                {
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, $"Id:{drugstore.Id} Name:{drugstore.Name} Adress:{drugstore.Adresss} ContactNumber:{drugstore.ContactNumber}");
-                }
-            id: ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Please Enter DrugStore Id:");
-                string drugstoreId = Console.ReadLine();
-                int id;
-                bool result = int.TryParse(drugstoreId, out id);
-                if (result)
-                {
-                    var drugstore = _drugStoreRepository.Get(d => d.Id == id);
-                    if (drugstore != null)
-                    {
-                        var drugs = _drugRepository.GetAll(d => d.DrugStores != null ? d.DrugStores.Id == drugstore.Id : false);
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "The drugs of drugsore:");
-                        foreach (var drug in drugs)
-                        {
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, $"Id:{drug.Id} Name:{drug.Name} Price:{drug.Price} Count:{drug.Count}");
-                        }
-                    }
-                    else
-                    {
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "This drugstore doesn't exist");
-                        goto all;
-                    }
-                }
-                else
-                {
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Please enter correct format id");
-                    goto id;
-                }
-            }
-            else
-            {
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "There is no any drugstores");
-            }
-        }
-        #endregion
-
         #region DrugFilter
         public void DrugFilter()
         {
@@ -323,10 +277,6 @@ namespace Pharmacy.Controllers
 
         }
         #endregion
-
-
-
-
 
     }
 }

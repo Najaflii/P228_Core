@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imac-win\\Source\\Repos\\Pharmacy-App\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\imac-win\\Desktop\\Pharmacy-App\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\imac-win\\Source\\Repos\\Pharmacy-App\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\imac-win\\Desktop\\Pharmacy-App\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\imac-win\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imac-win\\Source\\Repos\\Pharmacy-App\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\imac-win\\Desktop\\Pharmacy-App\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\imac-win\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\imac-win\\Source\\Repos\\Pharmacy-App\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\imac-win\\Source\\Repos\\Pharmacy-App\\Core\\Core.csproj"
+            "C:\\Users\\imac-win\\Desktop\\Pharmacy-App\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\imac-win\\Desktop\\Pharmacy-App\\Core\\Core.csproj"
             }
           }
         }
