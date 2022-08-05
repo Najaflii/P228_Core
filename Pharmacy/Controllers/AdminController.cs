@@ -27,7 +27,7 @@ namespace Pharmacy.Controllers
             ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "enter admin password:");
             string password = Console.ReadLine();
 
-            var admin = _adminRepositories.Get(a => a.UserName.ToLower() == userName.ToLower()
+            var admin = _adminRepositories.Get(a => a.Login.ToLower() == userName.ToLower()
                                              && PasswordHasher.Decrypt(a.Password) == password);
             return admin;
         

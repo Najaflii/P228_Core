@@ -11,7 +11,7 @@ namespace Core.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Price { get; set; }
+        public byte Price { get; set; }
         public int Count { get; set; }
         public DrugStore DrugStores { get; set; }
         public int CurrentCount { get; set; }

@@ -1,10 +1,6 @@
 ﻿using Core.Entities;
 using Core.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DataAccess.Contexts
 {
@@ -26,12 +22,12 @@ namespace DataAccess.Contexts
             Admin admin1 = new Admin("admin1", hashedPassword1);
             Admins.Add(admin1);
 
+
+
             string password2 = "87654321";
             var hashedPassword2 = PasswordHasher.Encrypt(password2);
             Admin admin2 = new Admin("admin2", hashedPassword2);
             Admins.Add(admin2);
-
-
         }
 
         public static List<Drug> Drugs { get; set; }
@@ -39,7 +35,5 @@ namespace DataAccess.Contexts
         public static List<DrugStore> DrugStores { get; set; }
         public static List<Admin> Admins { get; set; }
         public static List<Owner> Owners { get; set; }
-
-
     }
 }

@@ -18,9 +18,9 @@ namespace Pharmacy.Controllers
         #region CreateOwner
         public void CreateOwner()
         {
-            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Enter Owner Name:");
+            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter Owner Name");
             string name = Console.ReadLine();
-            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Enter Owner Surname:");
+            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter Owner Surname");
             string surname = Console.ReadLine();
 
             var owner = new Owner
@@ -29,7 +29,7 @@ namespace Pharmacy.Controllers
                 Surname = surname
             };
             var createdOwner = _ownerRepository.Create(owner);
-            ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Id:{owner.Id} Name:{owner.Name} Surname:{owner.Surname} Owner Successfully Created...");
+            ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Id:{owner.Id} Name:{owner.Name} Surname:{owner.Surname} Owner was successfully create");
         }
         #endregion
 

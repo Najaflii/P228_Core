@@ -64,7 +64,7 @@ namespace Pharmacy.Controllers
                             Owner = owner,
                         };
                         _drugStoreRepository.Create(drugstore);
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, $"Id:{drugstore.Id} Adress:{drugstore.Adresss} ContactNumber:{drugstore.ContactNumber} Owner:{drugstore.Owner.Name} DrugStore successfully created");
+                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Id:{drugstore.Id} Adress:{drugstore.Adresss} ContactNumber:{drugstore.ContactNumber} Owner:{drugstore.Owner.Name} DrugStore successfully created");
                     }
                     else
                     {

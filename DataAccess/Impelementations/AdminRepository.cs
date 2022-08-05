@@ -95,7 +95,7 @@ namespace DataAccess.Impelementations
                 var admin = DbContext.Admins.Find(g => g.Id == entity.Id);
                 if (admin != null)
                 {
-                    admin.UserName = entity.UserName;
+                    admin.Login = entity.Login;
                     admin.Password = entity.Password;
                 }
 

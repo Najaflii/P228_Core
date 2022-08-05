@@ -240,43 +240,5 @@ namespace Pharmacy.Controllers
         }
         #endregion
 
-        #region DrugFilter
-        public void DrugFilter()
-        {
-            var drugs = _drugRepository.GetAll();
-            if (drugs.Count > 0)
-            {
-            price: ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Please enter filter price:");
-                string filterprice = Console.ReadLine();
-                double price;
-                bool result = double.TryParse(filterprice, out price);
-                if (result)
-                {
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "All Drugs:");
-                    foreach (var drug in drugs)
-                    {
-                        if (drug.Price < price)
-                        {
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, $"Id:{drug.Id} Name:{drug.Name} Price:{drug.Price} Count:{drug.Count}");
-                        }
-
-
-                    }
-                }
-                else
-                {
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "please enter correct format price");
-                    goto price;
-                }
-            }
-            else
-            {
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "There is no any drug");
-            }
-
-
-        }
-        #endregion
-
     }
 }

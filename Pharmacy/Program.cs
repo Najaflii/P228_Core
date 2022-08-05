@@ -22,7 +22,7 @@ namespace Pharmacy
             if (admin != null)
             {
 
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Welcome :) {admin.UserName}");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Welcome :) {admin.Login}");
 
                 Console.WriteLine("***");
                 while (true)
@@ -32,7 +32,7 @@ namespace Pharmacy
                     ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Drug Menu");
                     ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - Druggist Menu");
                     ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "5 - DrugStore Menu");
-                   mainMenu: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Menu");
+                   mainMenu: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "0 - Menu");
 
                     Console.WriteLine("***");
 
@@ -60,7 +60,7 @@ namespace Pharmacy
                                     case (int)AdminOptions.Logout:
                                         goto adminUserName;
                                         break;
-                                    case (int)AdminOptions.BackMainMenu:
+                                    case (int)AdminOptions.Menu:
                                         goto mainMenu;
                                 }
                             }
@@ -105,12 +105,6 @@ namespace Pharmacy
                                     case (int)DrugOptions.GetAllDrug:
                                         _drugController.GetAllDrug();
                                         break;
-                                    case (int)DrugOptions.GetAllDrugByStore:
-                                        _drugController.GetAllDrugByStore();
-                                        break;
-                                    case (int)DrugOptions.DrugFilter:
-                                        _drugController.DrugFilter();
-                                        break;
                                     case (int)DrugOptions.BackMainMenu:
                                         goto mainMenu;
                                 }
@@ -153,9 +147,6 @@ namespace Pharmacy
                                     case (int)DruggistOptions.GetAllDruggist:
                                         _druggistController.GetAllDruggist();
                                             break;
-                                    case (int)DruggistOptions.GetAllDruggistByDrugStore:
-                                        _druggistController.GetAllDruggistByDrugStore();
-                                        break;
                                     case (int)DruggistOptions.BackToMainMenu:
                                         goto mainMenu;
                                 }

@@ -14,7 +14,5 @@ namespace Core.Helpers
             Console.WriteLine(text);
             Console.ResetColor();
         }
-
-
     }
 }

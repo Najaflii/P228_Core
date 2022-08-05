@@ -19,7 +19,6 @@ namespace DataAccess.Impelementations
             try
             {
                 DbContext.Druggists.Add(entity);
-
             }
             catch (Exception e)
             {
@@ -33,11 +32,9 @@ namespace DataAccess.Impelementations
             try
             {
                 DbContext.Druggists.Remove(entity);
-
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
         }
@@ -58,7 +55,6 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
@@ -70,7 +66,6 @@ namespace DataAccess.Impelementations
             {
                 if (filter == null)
                 {
-
                     return DbContext.Druggists;
                 }
                 else
@@ -80,11 +75,9 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
-
         }
 
         public void Update(Druggist entity)
@@ -104,7 +97,6 @@ namespace DataAccess.Impelementations
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-
             }
         }
     }

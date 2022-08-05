@@ -9,7 +9,7 @@ namespace Core.Constants
    public enum AdminOptions
     {
         Logout = 1,
-        BackMainMenu = 0,
+        Menu = 0,
     }
     public enum DrugOptions
     {
@@ -28,7 +28,6 @@ namespace Core.Constants
         UpdateDruggist,
         DeleteDruggist,
         GetAllDruggist,
-        GetAllDruggistByDrugStore,
         BackToMainMenu = 0,
     }
 
