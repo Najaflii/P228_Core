@@ -95,12 +95,12 @@ namespace Pharmacy.Controllers
             var owners = _ownerRepository.GetAll();
             if (owners.Count > 0)
             {
-            all: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "All owners");
+            all: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "All owners");
                 foreach (var owner in owners)
                 {
                     ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, $"Id:{owner.Id} Name:{owner.Name} Surname:{owner.Surname}");
                 }
-            id: ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Enter owner Id:");
+            id: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter owner Id:");
                 string ownerId = Console.ReadLine();
                 int id;
                 bool result = int.TryParse(ownerId, out id);

@@ -22,7 +22,6 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
             return entity;
@@ -36,7 +35,6 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
         }
@@ -48,7 +46,6 @@ namespace DataAccess.Impelementations
                 if (filter == null)
                 {
                     return DbContext.Owners[0];
-
                 }
                 else
                 {
@@ -57,7 +54,6 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
@@ -78,7 +74,6 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
@@ -93,15 +88,11 @@ namespace DataAccess.Impelementations
                 {
                     owner.Name = entity.Name;
                     owner.Surname = entity.Surname;
-                    
-                
                 }
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
-                
             }
         }
     }

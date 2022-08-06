@@ -126,7 +126,7 @@ namespace Pharmacy
 
                             Console.WriteLine("***");
 
-                        oppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Options:");
+                        opp: ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "Select Options:");
                             number = Console.ReadLine();
 
                             result = int.TryParse(number, out selectedNumber);
@@ -154,7 +154,7 @@ namespace Pharmacy
                             else
                             {
                                 ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
-                                goto oppp;
+                                goto opp;
                             }
 
                         }
@@ -170,7 +170,7 @@ namespace Pharmacy
 
                             Console.WriteLine("***");
 
-                        opppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Select option");
+                        oppp: ConsoleHelper.WriteTextWithColor(ConsoleColor.Blue, "Select option");
                             number = Console.ReadLine();
 
                             result = int.TryParse(number, out selectedNumber);
@@ -203,7 +203,7 @@ namespace Pharmacy
                             else
                             {
                                 ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct number");
-                                goto opppp;
+                                goto oppp;
                             }
                         }
                         else if (selectedNumber == 5)

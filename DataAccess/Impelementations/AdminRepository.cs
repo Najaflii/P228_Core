@@ -19,11 +19,9 @@ namespace DataAccess.Impelementations
             try
             {
                 DbContext.Admins.Add(entity);
-
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
                 return entity;
@@ -34,11 +32,9 @@ namespace DataAccess.Impelementations
             try
             {
                 DbContext.Admins.Remove(entity);
-
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
         }
@@ -55,12 +51,9 @@ namespace DataAccess.Impelementations
                 {
                     return DbContext.Admins.Find(filter);
                 }
-
-
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
@@ -78,11 +71,9 @@ namespace DataAccess.Impelementations
                 {
                     return DbContext.Admins.FindAll(filter);
                 }
-
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
@@ -98,11 +89,9 @@ namespace DataAccess.Impelementations
                     admin.Login = entity.Login;
                     admin.Password = entity.Password;
                 }
-
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
         }

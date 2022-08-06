@@ -79,7 +79,6 @@ namespace DataAccess.Impelementations
                 return null;
             }
         }
-
         public void Update(Druggist entity)
         {
             try
@@ -98,6 +97,7 @@ namespace DataAccess.Impelementations
             {
                 Console.WriteLine(e.Message);
             }
+
         }
     }
 }

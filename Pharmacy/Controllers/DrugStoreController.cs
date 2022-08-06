@@ -60,7 +60,6 @@ namespace Pharmacy.Controllers
                         {
                             Name = name,
                             Adresss = adress,
-                            ContactNumber = contactNumber,
                             Owner = owner,
                         };
                         _drugStoreRepository.Create(drugstore);
@@ -109,15 +108,15 @@ namespace Pharmacy.Controllers
                     {
                         string oldname = drugstore.Name;
                         string oldadress = drugstore.Adresss;
-                        string oldcontactnumber = drugstore.ContactNumber;
 
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Enter new DrugStore name");
+
+                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter DrugStore name");
                         string newName = Console.ReadLine();
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Enter new DrugStore adress");
+                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter DrugStore adress");
                         string newAdress = Console.ReadLine();
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Enter new DrugStore contact number");
+                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter DrugStore contact number");
                         string newContactName = Console.ReadLine();
-                    owid: ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "Enter new DrugStore owner Id");
+                    owid: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter DrugStore owner Id");
                         string newOwnerId = Console.ReadLine();
                         int newId;
                         result = int.TryParse(newOwnerId, out newId);
@@ -131,7 +130,6 @@ namespace Pharmacy.Controllers
                                     Id = drugstore.Id,
                                     Name = newName,
                                     Adresss = newAdress,
-                                    ContactNumber = newContactName,
                                     Owner = owner,
                                 };
                                 _drugStoreRepository.Update(newDrugstore);
@@ -140,26 +138,19 @@ namespace Pharmacy.Controllers
                             else
                             {
                                 ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "This owner doesn't exist");
-
                             }
                         }
                         else
                         {
-                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct owner Id");
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct Id");
                             goto owid;
                         }
                     }
                     else
                     {
-                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "DrugStore with this Id doesn't exist");
+                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct Id");
                         goto id;
                     }
-
-                }
-                else
-                {
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Please enter correct format id");
-                    goto id;
                 }
             }
             else

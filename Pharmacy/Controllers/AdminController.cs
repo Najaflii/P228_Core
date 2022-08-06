@@ -17,28 +17,20 @@ namespace Pharmacy.Controllers
             _adminRepositories = new AdminRepository();
         }
 
-        #region Authenticate
+
         public Admin Authenticate()
         {
            
-            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "enter admin username:");
+            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter admin login:");
             string userName = Console.ReadLine();
 
-            ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, "enter admin password:");
+            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter admin password:");
             string password = Console.ReadLine();
 
             var admin = _adminRepositories.Get(a => a.Login.ToLower() == userName.ToLower()
                                              && PasswordHasher.Decrypt(a.Password) == password);
             return admin;
         
-
         }
-
-
-        #endregion
-
-
-
-
     }
 }

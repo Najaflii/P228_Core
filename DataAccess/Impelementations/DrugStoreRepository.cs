@@ -23,9 +23,26 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
+            }
+        }
+        public void Update(DrugStore entity)
+        {
+            try
+            {
+                if (entity != null)
+                {
+                    var drugStore = DbContext.DrugStores.Find(d => d.Id == entity.Id);
+                    drugStore.Name = entity.Name;
+                    drugStore.Adresss = entity.Adresss;
+                    drugStore.ContactNumber = entity.ContactNumber;
+                    drugStore.Owner = entity.Owner;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -37,7 +54,6 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
         }
@@ -57,7 +73,6 @@ namespace DataAccess.Impelementations
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
@@ -74,38 +89,15 @@ namespace DataAccess.Impelementations
                 else
                 {
                     return DbContext.DrugStores.FindAll(filter);
-
                 }
 
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
                 return null;
             }
-
         }
 
-        public void Update(DrugStore entity)
-        {
-            try
-            {
-                if (entity != null)
-                {
-                    var drugStore = DbContext.DrugStores.Find(d => d.Id == entity.Id);
-                    drugStore.Name = entity.Name;
-                    drugStore.Adresss = entity.Adresss;
-                    drugStore.ContactNumber = entity.ContactNumber;
-                    drugStore.Owner = entity.Owner;
-                    
-                }
-            }
-            catch (Exception e)
-            {
-
-                Console.WriteLine(e.Message);
-            }
-        }
     }
 }

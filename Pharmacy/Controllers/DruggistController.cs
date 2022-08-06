@@ -242,15 +242,15 @@ namespace Pharmacy.Controllers
             var druggists = _druggistRepository.GetAll();
             if (druggists.Count > 0)
             {
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.DarkBlue, "All Druggist:");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "All Druggist");
                 foreach (var druggist in druggists)
                 {
-                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Cyan, $"Id:{druggist.Id} Name:{druggist.Name} Surname:{druggist.Surname} Age:{druggist.Age} Experience:{druggist.Experience} ");
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, $"Id:{druggist.Id} Name:{druggist.Name} Surname:{druggist.Surname} Age:{druggist.Age} Experience:{druggist.Experience} ");
                 }
             }
             else
             {
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "There is no any druggist");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "There's no druggist");
             }
         }
 
