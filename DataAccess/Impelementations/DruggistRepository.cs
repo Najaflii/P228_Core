@@ -51,7 +51,6 @@ namespace DataAccess.Impelementations
                 {
                     return DbContext.Druggists.Find(filter);
                 }
-
             }
             catch (Exception e)
             {
@@ -91,13 +90,11 @@ namespace DataAccess.Impelementations
                     druggist.Age = entity.Age;
                     druggist.DrugStore = entity.DrugStore;
                 }
-
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-
         }
     }
 }

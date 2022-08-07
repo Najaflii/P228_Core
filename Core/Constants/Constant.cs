@@ -11,7 +11,22 @@ namespace Core.Constants
         Logout = 1,
         Menu = 0,
     }
+
+    #region Owner
+    public enum OwnerOptions
+    {
+        CreateOwner = 1,
+        UpdateOwner,
+        DeleteOwner,
+        GetAllOwner,
+        BackToMainMenu = 0,
+    }
+    #endregion
+
+
+    #region Drug 
     public enum DrugOptions
+
     {
         CreateDrug = 1,
         UpdateDrug,
@@ -21,7 +36,10 @@ namespace Core.Constants
         DrugFilter,
         BackMainMenu = 0,
     }
+    #endregion
 
+
+    #region Druggist
     public enum DruggistOptions
     {
         CreateDruggist = 1,
@@ -30,7 +48,10 @@ namespace Core.Constants
         GetAllDruggist,
         BackToMainMenu = 0,
     }
+    #endregion
 
+
+    #region DrugStore
     public enum DrugStoreOptions
     {
         CreateDrugStore = 1,
@@ -41,15 +62,6 @@ namespace Core.Constants
         Sale,
         BackToMainMenu = 0,
     }
-    public enum OwnerOptions
-    {
-        CreateOwner = 1,
-        UpdateOwner,
-        DeleteOwner,
-        GetAllOwner,
-        BackToMainMenu = 0,
-    }
-
-  
+    #endregion
 }
 

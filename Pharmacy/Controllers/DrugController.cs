@@ -109,10 +109,11 @@ namespace Pharmacy.Controllers
                 {
                     ConsoleHelper.WriteTextWithColor(ConsoleColor.Yellow, $"Id:{drug.Id} Name:{drug.Name} Price:{drug.Price} Count:{drug.Count} DrugStore:{drug.DrugStores.Name}");
                 }
-            id: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter drug Id");
-                string drugId = Console.ReadLine();
+            idd: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter drug Id");
+                int chosenId;
+                string Id = Console.ReadLine();
                 int id;
-                bool result = int.TryParse(drugId, out id);
+                bool result = int.TryParse(Id, out id);
                 if (result)
                 {
                     var drug = _drugRepository.Get(d => d.Id == id);
@@ -159,7 +160,7 @@ namespace Pharmacy.Controllers
                 else
                 {
                     ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct Id");
-                    goto id;
+                    goto idd;
                 }
             }
             else

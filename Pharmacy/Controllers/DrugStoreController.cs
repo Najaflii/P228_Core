@@ -125,6 +125,7 @@ namespace Pharmacy.Controllers
                             var owner = _ownerRepository.Get(o => o.Id == id);
                             if (owner != null)
                             {
+                       
                                 var newDrugstore = new DrugStore
                                 {
                                     Id = drugstore.Id,
