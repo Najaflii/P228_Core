@@ -332,7 +332,6 @@ namespace Pharmacy.Controllers
                             double SumPrice = drug.Price;
                             if (count > CurrentCount)
                             {
-
                                 {
                                     ConsoleHelper.WriteTextWithColor(ConsoleColor.Green, $"Id:{drug.Id} Name:{drug.Name} SumPrice:{SumPrice}, DrugCount:{CurrentCount}");
                                 }

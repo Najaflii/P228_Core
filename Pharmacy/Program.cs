@@ -28,10 +28,10 @@ public class Pharmacy
             while (true)
             {
                 ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "1 - Admin Menu");
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "2 - Owner Menu");
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Drug Menu");
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - Druggist Menu");
-                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "5 - DrugStore Menu");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "2 - Drug Menu");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Druggist Menu");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - DrugStore Menu");
+                ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "5 - Owner Menu");
                mainMenu: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "0 - Menu");
 
                 Console.WriteLine("***");
@@ -79,6 +79,8 @@ public class Pharmacy
                         ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "3 - Delete Drug");
                         ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "4 - Get All");
                         ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "5 - Get All Drug By Store");
+                        ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "6 - Filter Drugs");
+
                         ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "0 - Menu");
 
                         Console.WriteLine("***");

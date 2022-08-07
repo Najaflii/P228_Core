@@ -138,7 +138,7 @@ namespace Pharmacy.Controllers
                             {
                                 var newDrug = new Drug
                                 {
-                                   Id = drug.Id,
+                                    Id = drug.Id,
                                     Name = newName,
                                     Count = count,
                                 };
@@ -233,5 +233,38 @@ namespace Pharmacy.Controllers
         }
         #endregion
 
+        #region Filter
+        public void DrugFilter()
+        {
+            var drugs = _drugRepository.GetAll();
+            if (drugs.Count > 0) ;
+            {
+            Price: ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "Enter filter price");
+                string filterprice = Console.ReadLine();
+                double price;
+                bool result = double.TryParse(filterprice, out price);
+                if (result)
+                {
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, "All drug list");
+                    foreach (var drug in drugs)
+                    {
+                        if (drug.Price <= price) 
+                        {
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Magenta, $"id : {drug.Id}, name : {drug.Name}, price : {drug.Price}, count : {drug.Count}");
+                        }
+                          else
+                        {
+                            ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "Enter correct price");
+                        }
+                    }
+                }
+                else
+                {
+                    ConsoleHelper.WriteTextWithColor(ConsoleColor.Red, "There's no drug");
+                }
+            }
+
+        }
     }
 }
+#endregion
